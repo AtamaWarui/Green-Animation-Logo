@@ -1,0 +1,70 @@
+html, body {
+	padding: 0; margin: 0;
+}
+
+body {
+	position: relative;
+	width: 100vw;
+	min-width: 800px;
+	height: 100vh;
+	min-height: 600px;
+	background: linear-gradient(-45deg, #8FBC8F, #edeef3);
+}
+	body *, body *:before, body *:after {
+		content: '';
+		position: absolute;
+		top: 50%; left: 50%;
+	}
+
+
+.eye {
+	width: 332px; height: 332px;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	background: #EBEDF3;
+	filter: blur(5px);
+
+	animation: eyeAnimation 4s cubic-bezier(1, 0, 1, 1) infinite;
+}
+@keyframes eyeAnimation {
+	0%, 33%, 100% {
+		box-shadow: inset -8px -13px 20px -10px #006400, 64px 55px 40px -40px #008000, 20px 18px 30px -10px #228B22, inset -70px -50px 60px -30px #556B2F, inset -90px -90px 70px -90px #808000, inset -70px -50px 100px -40px #808000, inset 80px 50px 80px -50px #eeeef3, -25px -15px 50px -10px #F6F6FB, 14px -1px 50px -10px #6B8E23, 1px 9px 50px -10px #6B8E23, inset -90px 40px 60px -20px #006400, inset -90px -120px 60px -20px #006400;
+    transform: translate(-50%, -50%) scale(1.25);
+	}
+	65% {
+		box-shadow: inset -8px -13px 60px -10px #006400, 44px 35px 20px -20px #006400, 11px 9px 9px -4px #006400, inset -100px -70px 40px -110px #006400, inset -90px -90px 70px -90px #006400, inset -70px -50px 100px -40px #006400, inset 80px 50px 80px -50px #eeeef3, -25px -15px 30px -10px #F6F6FB;
+		transform: translate(-50%, -50%) scale(1);
+	}
+}
+
+
+.eye::after {
+	width: 160px; height: 160px;
+	border-radius: 50%;
+	box-shadow: inset -50px -20px 30px 0px #e7e2f5, inset 100px 10px 20px -27px #008000, 0px 0px 10px 7px rgba(231, 226, 245, 1);
+
+	animation: pupilAnimationSize 4s cubic-bezier(1, 0, 1, 1) infinite,
+						 pupilAnimationView 4s ease infinite;
+}
+@keyframes pupilAnimationSize {
+0%, 30%, 100% { transform: translate(-50%, -50%) scale(0.85); }
+40%, 90% 			{ transform: translate(-50%, -50%) scale(0.5); }
+}
+@keyframes pupilAnimationView {
+0%, 30%, 100% {
+	box-shadow: inset -50px -20px 30px 0px #e7e2f5, inset 100px 10px 20px -27px #008000, 0px 0px 10px 7px rgba(231, 226, 245, 1);
+}
+60%, 66% {
+	box-shadow: inset -50px -20px 30px 0px #006400, inset 10px 10px 70px -27px #006400, 0px 0px 10px 7px #006400;
+}
+90% {
+	box-shadow: inset -50px -20px 30px 0px #e7e2f5, inset 100px 10px 20px -27px #008000, 0px 0px 10px 7px rgba(231, 226, 245, 1);
+}
+}
+
+
+
+
+
+
+
